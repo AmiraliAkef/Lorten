@@ -1,4 +1,4 @@
-# URL Shortener (Java + Spring Boot)
+# Lorten (Java + Spring Boot)
 
 A simple URL shortener built with **Java** and **Spring Boot**.  
 This project demonstrates how to build a REST API with backend logic to shorten long URLs into short, shareable codes.
@@ -16,19 +16,19 @@ This project demonstrates how to build a REST API with backend logic to shorten 
 
 ## 📂 Project Structure
 ```
-url-shortener-java/
-│
-├── pom.xml                       # Maven build file
-└── src/
-    ├── main/
-    │   ├── java/com/example/urlshortener/
-    │   │   ├── UrlShortenerApplication.java  # Main entry point
-    │   │   ├── UrlController.java            # Handles HTTP requests
-    │   │   └── UrlService.java               # Business logic (shortening)
-    │   └── resources/
-    │       ├── application.properties        # App config
-    │       └── static/                       # Frontend files (later)
-    └── test/java/                            # Unit tests (optional)
+Lorten/
+├── src/
+│ ├── main/
+│ │ ├── java/com/example/Lorten/
+│ │ │ ├── LortenApplication.java
+│ │ │ ├── controller/
+│ │ │ │ └── UrlController.java
+│ │ │ └── service/
+│ │ │ └── UrlService.java
+│ │ └── resources/
+│ │ └── application.properties
+│ └── test/java/com/example/Lorten/
+│ └── LortenApplicationTests.java
 ```
 
 ---
@@ -44,8 +44,8 @@ url-shortener-java/
 
 1. **Clone the repository**
 ```bash
-git clone git@github.com:your-username/url-shortener-java.git
-cd url-shortener-java
+git clone git@github.com:your-username/Lorten.git
+cd Lorten
 ```
 
 2. **Build and run the project**
