@@ -44,7 +44,7 @@ Lorten/
 
 1. **Clone the repository**
 ```bash
-git clone git@github.com:your-username/Lorten.git
+git clone git@github.com:AmiraliAkef/Lorten.git
 cd Lorten
 ```
 
