@@ -1,16 +1,18 @@
 # Lorten (Java + Spring Boot)
 
-A simple URL shortener built with **Java** and **Spring Boot**.  
-This project demonstrates how to build a REST API with backend logic to shorten long URLs into short, shareable codes.
+A simple URL shortener built with **Java** and **Spring Boot** with a modern web frontend.  
+This project demonstrates how to build a REST API with backend logic to shorten long URLs into short, shareable codes, complete with a beautiful responsive website.
 
 ---
 
 ## 🚀 Features
-- Shorten any long URL into a short code
-- Retrieve the original URL using the short code
-- In-memory storage (HashMap) for simplicity
-- JSON-based API endpoints
-- Easily extendable to use a database later
+- **Modern Web Interface**: Beautiful, responsive website with gradient design
+- **URL Shortening**: Convert any long URL into a short, shareable code
+- **One-Click Copy**: Easy copying of shortened URLs to clipboard
+- **Real-time Validation**: Client-side URL format validation
+- **Mobile-Friendly**: Fully responsive design for all devices
+- **REST API**: JSON-based API endpoints for programmatic access
+- **In-memory Storage**: HashMap-based storage (easily extendable to database)
 
 ---
 
@@ -23,10 +25,16 @@ Lorten/
 │ │ │ ├── LortenApplication.java
 │ │ │ ├── controller/
 │ │ │ │ └── UrlController.java
-│ │ │ └── service/
-│ │ │ └── UrlService.java
+│ │ │ ├── service/
+│ │ │ │ └── UrlService.java
+│ │ │ └── config/
+│ │ │ └── CorsConfig.java
 │ │ └── resources/
-│ │ └── application.properties
+│ │ ├── application.properties
+│ │ └── static/
+│ │ ├── index.html
+│ │ ├── style.css
+│ │ └── script.js
 │ └── test/java/com/example/Lorten/
 │ └── LortenApplicationTests.java
 ```
@@ -54,51 +62,75 @@ mvn spring-boot:run
 ```
 
 3. **Access the app**
-- API runs on: `http://localhost:8080`
+- **Website**: `http://localhost:8081` (beautiful web interface)
+- **API**: `http://localhost:8081/api/url` (REST endpoints)
+
+---
+
+## 🌐 Web Interface
+
+Visit `http://localhost:8081` to access the beautiful web interface where you can:
+- Enter any long URL in the input field
+- Click "Shorten URL" to generate a short code
+- Copy the shortened URL with one click
+- See real-time validation and error messages
+- Enjoy a fully responsive design on any device
 
 ---
 
 ## 📌 API Endpoints
 
 ### 1. Shorten a URL
-**POST** `/shorten`  
+**POST** `/api/url/shorten`  
 Request body:
 ```json
-{
-  "longUrl": "https://www.google.com"
-}
+"https://www.google.com"
 ```
 Response:
 ```json
 {
-  "shortUrl": "http://localhost:8080/a1b2c3"
+  "code": "a1b2c3d4",
+  "shortUrl": "http://localhost:8081/api/url/a1b2c3d4",
+  "originalUrl": "https://www.google.com"
 }
 ```
 
 ---
 
 ### 2. Redirect to Original URL
-**GET** `/{shortCode}`  
+**GET** `/api/url/{shortCode}`  
 Example:
 ```
-http://localhost:8080/a1b2c3
+http://localhost:8081/api/url/a1b2c3d4
 ```
 → redirects to `https://www.google.com`
 
 ---
 
 ## 🧩 Tech Stack
+
+### Backend
 - **Java 17**
 - **Spring Boot** (Web + JSON handling with Jackson)
 - **Maven** for build management
+- **H2 Database** (in-memory for development)
+
+### Frontend
+- **HTML5** with semantic markup
+- **CSS3** with modern features (gradients, animations, flexbox)
+- **Vanilla JavaScript** (ES6+ features)
+- **Responsive Design** (mobile-first approach)
 
 ---
 
 ## 📌 Future Improvements
 - Use a database (MySQL/Postgres/MongoDB) instead of HashMap
 - Add custom short codes
-- Add user authentication
-- Create a frontend UI
+- Add user authentication and user-specific URLs
+- Add URL analytics and click tracking
+- Implement URL expiration dates
+- Add bulk URL shortening
+- Create admin dashboard
 
 ---
 
