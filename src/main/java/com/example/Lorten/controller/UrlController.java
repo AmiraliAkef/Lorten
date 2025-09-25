@@ -22,7 +22,7 @@ public class UrlController {
             String code = urlService.encoder(longUrl);
             Map<String, String> response = new HashMap<>();
             response.put("code", code);
-            response.put("shortUrl", "http://localhost:8080/api/url/" + code);
+            response.put("shortUrl", "http://localhost:8081/api/url/" + code);
             response.put("originalUrl", longUrl);
             return ResponseEntity.ok(response);
         } catch (Exception e) {

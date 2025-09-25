@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-LortenApplication<Lorten>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.Lorten.LortenApplication",
+            "projectName": "Lorten",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
