@@ -1,12 +1,12 @@
 # Lorten (Java + Spring Boot)
 
 A simple URL shortener built with **Java** and **Spring Boot** with a modern web frontend.  
-This project demonstrates how to build a REST API with backend logic to shorten long URLs into short, shareable codes, complete with a beautiful responsive website.
+This project demonstrates how to build a REST API with backend logic to shorten long URLs into short, shareable codes, complete with a responsive website.
 
 ---
 
 ## 🚀 Features
-- **Modern Web Interface**: Beautiful, responsive website with gradient design
+- **Web Interface**: Responsive website with gradient design
 - **URL Shortening**: Convert any long URL into a short, shareable code
 - **One-Click Copy**: Easy copying of shortened URLs to clipboard
 - **Real-time Validation**: Client-side URL format validation
