@@ -79,13 +79,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
 
-            const data = await response.json();
+            const shortCode = await response.text();
+            const shortUrl = `http://localhost:8081/api/url/${shortCode}`;
             
-            if (data.error) {
-                throw new Error(data.error);
-            }
-            
-            displayResult(data.shortUrl, data.originalUrl);
+            displayResult(shortUrl, longUrl);
             
         } catch (error) {
             console.error('Error shortening URL:', error);
