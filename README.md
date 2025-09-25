@@ -62,19 +62,8 @@ mvn spring-boot:run
 ```
 
 3. **Access the app**
-- **Website**: `http://localhost:8081` (beautiful web interface)
-- **API**: `http://localhost:8081/api/url` (REST endpoints)
-
----
-
-## 🌐 Web Interface
-
-Visit `http://localhost:8081` to access the beautiful web interface where you can:
-- Enter any long URL in the input field
-- Click "Shorten URL" to generate a short code
-- Copy the shortened URL with one click
-- See real-time validation and error messages
-- Enjoy a fully responsive design on any device
+- **Website**: `http://localhost:8081` 
+- **API**: `http://localhost:8081/api/url` 
 
 ---
 
@@ -117,14 +106,14 @@ http://localhost:8081/api/url/a1b2c3d4
 
 ### Frontend
 - **HTML5** with semantic markup
-- **CSS3** with modern features (gradients, animations, flexbox)
-- **Vanilla JavaScript** (ES6+ features)
-- **Responsive Design** (mobile-first approach)
+- **CSS3** with gradients, animations, flexbox
+- **JavaScript**
+- **Responsive Design**
 
 ---
 
 ## 📌 Future Improvements
-- Use a database (MySQL/Postgres/MongoDB) instead of HashMap
+- Use a database (MySQL/Postgres/MongoDB)
 - Add custom short codes
 - Add user authentication and user-specific URLs
 - Add URL analytics and click tracking
